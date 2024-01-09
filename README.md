@@ -1,8 +1,6 @@
-## alaricli.com
+## alaric.li
 
 Building a new web page
-
-Currently accessible via: https://d1kwy50tfqpbr9.cloudfront.net
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.10.
 
