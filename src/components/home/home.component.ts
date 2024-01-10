@@ -27,10 +27,10 @@ import { Component } from '@angular/core';
       display: block;
     }
     .profile-image {
-      width: 175px; /* Adjust as needed */
-      height: 175px; /* Adjust as needed */
-      border-radius: 50%; /* Makes the image round */
-      margin-bottom: 15px; /* Adds space between the image and title */
+      width: 175px;
+      height: 175px; 
+      border-radius: 50%; 
+      margin-bottom: 15px; 
     }
   `
   ]

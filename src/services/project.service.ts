@@ -9,10 +9,10 @@ export class ProjectService {
     private projects: Project[] = [
       {
         id: 1,
-        title: 'www.alaricli.com',
+        title: 'www.alaric.li',
         description: 'Personal website for sharing more about myself hosted on AWS.',
         imageUrl: 'assets/me.png',
-        githubUrl: 'https://github.com/alaricli/alaricli.com',
+        githubUrl: 'https://github.com/alaricli/alaric.li',
         tags: ['Angular', 'Typescript', 'AWS']
       },
       {
