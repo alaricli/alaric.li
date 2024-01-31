@@ -25,10 +25,10 @@ export class ProjectService {
       },
       {
         id: 3,
-        title: 'UBC Insight',
-        description: 'Full-stack application for querying specific information on previous UBC courses. Unfortunately, unable to share repository in alignment with academic policies.',
+        title: 'Insight',
+        description: 'Full-stack application for querying specific information on previous university courses.',
         imageUrl: 'assets/ubc.png',
-        githubUrl: 'https://github.com/alaricli',
+        githubUrl: 'https://github.com/alaricli/insight',
         tags: ['Typescript', 'React', 'Express', 'Postman']
       },
       {
