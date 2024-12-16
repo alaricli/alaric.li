@@ -3,7 +3,15 @@ import ProjectCard, { ProjectCardProps } from "../components/projectCard";
 
 const projects: ProjectCardProps[] = [
   {
-    title: "scentsaver.co",
+    title: "ptcgpocket.net",
+    description:
+      "Full stack web application for querying information about the Pokémon TCG Pocket game",
+    imageUrl: "/tcg.jpg",
+    githubUrl: "https://github.com/alaricli/professorsresearchtcg.com",
+    technologies: ["Next.js", "PostgreSQL", "Java", "Spring Boot"],
+  },
+  {
+    title: "scentsaverco.vercel.app",
     description:
       "custom Shopify storefront for my side business built using on Shopify's Storefront API",
     imageUrl: "/scentsaverlogo.png",
@@ -11,16 +19,8 @@ const projects: ProjectCardProps[] = [
     technologies: ["Next.js", "TypeScript", "GraphQL", "Tailwind CSS"],
   },
   {
-    title: "professorsresearchtcg.com",
-    description:
-      "work-in-progress database project regarding the Pokemon TCG card game",
-    imageUrl: "/tcg.jpg",
-    githubUrl: "https://github.com/alaricli/professorsresearchtcg.com",
-    technologies: ["Remix", "PostgreSQL", "Java", "Spring Boot"],
-  },
-  {
     title: "recharged.icu",
-    description: "work-in-progress ecommerce store without using Shopify API",
+    description: "work-in-progress fully custom e-commerce store",
     imageUrl: "/phone.jpg",
     githubUrl: "https://github.com/alaricli/recharged.icu",
     technologies: ["Remix", "PostgreSQL", "Java", "Spring Boot", "Stripe API"],
