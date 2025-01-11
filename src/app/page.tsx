@@ -13,12 +13,12 @@ export default function Home() {
           alt="Picture of the author"
           className="rounded-full"
         />
-        <h1 className="mt-2 text-3xl">Alaric Li</h1>
+        <h1 className="text-4xl mt-3">Alaric Li</h1>
         <div className="flex flex-col items-center text-center">
           <span>ubc business + cs</span>
           <span>prev: sap</span>
         </div>
-        <ul className="flex space-x-1 p-1">
+        <ul className="flex mt-2 space-x-2">
           <li>
             <a
               href="https://www.linkedin.com/in/alaricli/"

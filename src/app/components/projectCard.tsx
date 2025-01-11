@@ -17,7 +17,7 @@ const ProjectCard: FC<ProjectCardProps> = ({
   technologies,
 }) => {
   return (
-    <div className="bg-[#E6E8F0] text-[#333333] border border-gray-200 rounded-lg max-w-2xl shadow-md overflow mx-auto">
+    <div className="bg-[#E6E8F0] text-[#333333] border border-gray-200 rounded-lg max-w-2xl shadow-md overflow mx-auto hover:scale-105 transition-transform duration-300">
       <div className="flex">
         <div className="w-1/4 p-1">
           <Image
