@@ -4,7 +4,7 @@ import { FC } from "react";
 const Navbar: FC = () => {
   return (
     <nav className="flex justify-between items-center p-4">
-      <div>
+      <div className="">
         <ul className="flex space-x-4">
           <li>
             <Link href="/">Home</Link>
