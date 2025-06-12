@@ -15,8 +15,9 @@ export default function Home() {
         />
         <h1 className="text-4xl mt-3">Alaric Li</h1>
         <div className="flex flex-col items-center text-center">
-          <span>ubc business + cs</span>
+          <span>software engineer @ea</span>
           <span>prev: sap</span>
+          <span>ubc business + cs</span>
         </div>
         <ul className="flex mt-2 space-x-2">
           <li>
