@@ -12,9 +12,9 @@ const Navbar: FC = () => {
           <li>
             <Link href="/projects">Projects</Link>
           </li>
-          {/* <li>
+          <li>
             <Link href="/blog">Blog</Link>
-          </li> */}
+          </li>
         </ul>
       </div>
       <div>

@@ -6,7 +6,6 @@ export interface ProjectCardProps {
   description: string;
   imageUrl: string;
   githubUrl: string;
-  technologies: string[];
 }
 
 const ProjectCard: FC<ProjectCardProps> = ({
@@ -14,7 +13,6 @@ const ProjectCard: FC<ProjectCardProps> = ({
   description,
   imageUrl,
   githubUrl,
-  technologies,
 }) => {
   return (
     <div className="bg-[#E6E8F0] text-[#333333] border border-gray-200 rounded-lg max-w-2xl shadow-md overflow mx-auto hover:scale-105 transition-transform duration-300">
@@ -37,19 +35,6 @@ const ProjectCard: FC<ProjectCardProps> = ({
           </a>
           <p className="pt-2 pb-3 pl-4 pr-2">{description}</p>
         </div>
-      </div>
-
-      <div className="pt-1 pb-2">
-        <ul className="flex flex-wrap gap-2 justify-center">
-          {technologies.map((technology, index) => (
-            <li
-              key={index}
-              className="border rounded-lg pt-1 pb-1 pl-2 pr-2 bg-[#3B82F6] text-[#FFFFFF]"
-            >
-              {technology}
-            </li>
-          ))}
-        </ul>
       </div>
     </div>
   );

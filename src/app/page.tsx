@@ -7,7 +7,7 @@ export default function Home() {
     <div className="h-screen flex items-center justify-center">
       <div className="flex flex-col items-center">
         <Image
-          src="/me.png"
+          src="/me_squared.JPEG"
           width={300}
           height={300}
           alt="Picture of the author"
@@ -15,7 +15,7 @@ export default function Home() {
         />
         <h1 className="text-4xl mt-3">Alaric Li</h1>
         <div className="flex flex-col items-center text-center">
-          <span>software engineer @ea</span>
+          <span>software engineer @electronicarts</span>
           <span>prev: sap</span>
           <span>ubc business + cs</span>
         </div>
@@ -46,7 +46,7 @@ export default function Home() {
           </li>
           <li>
             <a
-              href="https://www.instagram.com/andyli51/"
+              href="https://www.instagram.com/alaric_li_/"
               className="hover:text-[#E1306C]"
             >
               <FaSquareInstagram style={{ fontSize: "30px" }} />
