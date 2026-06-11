@@ -20,15 +20,16 @@ const projects: ProjectCardProps[] = [
   // },
   {
     title: "recharged-shop.com",
-    description: "work-in-progress fully custom e-commerce store",
-    imageUrl: "/phone.jpg",
-    url: "https://github.com/alaricli/recharged.icu",
+    description:
+      "A custom full stack e-commerce platform built from the ground up, featuring a Next.js storefront, RESTful backend, and integrated payment processing",
+    imageUrl: "/recharged.svg",
+    url: "https://recharged-shop.com",
   },
   {
     title: "Jenkins Build Log Analysis Pipeline",
-    description: "Automated Jenkins log analysis pipeline to report build failures in natural language from raw console output logs",
-    imageUrl: "/jenkins.jpg",
-    url: "https://github.com/alaricli/recharged.icu",
+    description:
+      "Automated Jenkins log analysis pipeline to report build failures in natural language from raw console output logs",
+    imageUrl: "/Jenkins.svg",
   },
   // {
   //   title: "UBC Insight",
@@ -42,8 +43,14 @@ const projects: ProjectCardProps[] = [
     title: "Pokémon Showdown Contributions",
     description:
       "Contributions I made to the Pokémon Showdown battle simulator open-source project",
-    imageUrl: "/showdown.png",
+    imageUrl: "/showdown.svg",
     url: "https://github.com/alaricli/pokemon-showdown",
+  },
+  {
+    title: "RPC GUI",
+    description:
+      "A desktop GUI tool for testing and inspecting RPC calls, similar to Postman or Swagger but purpose-built for remote procedure call interfaces",
+    imageUrl: "/RPC.svg",
   },
 ];
 

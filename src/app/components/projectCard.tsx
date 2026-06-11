@@ -1,4 +1,4 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import {
   Card,
@@ -12,17 +12,10 @@ export interface ProjectCardProps {
   title: string;
   description: string;
   imageUrl: string;
-  url: string;
+  url?: string;
   technologies?: string[];
 }
 
-function getInitials(title: string) {
-  return title
-    .split(/\s+/)
-    .slice(0, 2)
-    .map((word) => word.charAt(0).toUpperCase())
-    .join("");
-}
 
 const ProjectCard = ({
   title,
@@ -34,21 +27,27 @@ const ProjectCard = ({
   return (
     <Card className="group flex h-full flex-col justify-between overflow-hidden transition-all duration-300 hover:border-muted-foreground/30 hover:shadow-md [--card-spacing:--spacing(6)]">
       <CardHeader className="flex flex-row items-center gap-4">
-        <Avatar className="size-14 rounded-lg after:rounded-lg">
-          <AvatarImage src={imageUrl} alt={`${title} logo`} />
-          <AvatarFallback className="rounded-lg text-sm font-medium">
-            {getInitials(title)}
-          </AvatarFallback>
-        </Avatar>
+        <div className="relative size-14 shrink-0 overflow-hidden rounded-sm border border-border">
+          <Image
+            src={imageUrl}
+            alt={`${title} logo`}
+            fill
+            className="object-contain"
+          />
+        </div>
         <CardTitle className="flex-1 text-xl font-semibold tracking-tight">
-          <a
-            href={url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline-offset-4 hover:underline"
-          >
-            {title}
-          </a>
+          {url ? (
+            <a
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline-offset-4 hover:underline"
+            >
+              {title}
+            </a>
+          ) : (
+            <span>{title}</span>
+          )}
         </CardTitle>
       </CardHeader>
       <CardContent>
