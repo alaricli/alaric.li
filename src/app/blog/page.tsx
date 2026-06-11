@@ -36,36 +36,40 @@ export default function Blog() {
               className="w-full max-w-2xl"
             >
               <Card className="overflow-hidden transition-shadow hover:shadow-md">
-                {post.coverImage && (
-                  <div className="relative h-48 w-full">
-                    <Image
-                      src={post.coverImage}
-                      alt={post.title}
-                      fill
-                      className="object-cover"
-                    />
+                <div className="flex flex-row items-start">
+                  <div className="min-w-0 flex-1">
+                    <CardHeader>
+                      <p className="text-xs text-muted-foreground">
+                        <time dateTime={post.date}>
+                          {formatPostDate(post.date)}
+                        </time>
+                      </p>
+                      <CardTitle className="text-lg">{post.title}</CardTitle>
+                      <CardDescription>{post.description}</CardDescription>
+                    </CardHeader>
+                    {post.tags.length > 0 && (
+                      <CardContent>
+                        <div className="flex flex-wrap gap-1.5">
+                          {post.tags.map((tag) => (
+                            <Badge key={tag} variant="secondary">
+                              {tag}
+                            </Badge>
+                          ))}
+                        </div>
+                      </CardContent>
+                    )}
                   </div>
-                )}
-                <CardHeader>
-                  <p className="text-xs text-muted-foreground">
-                    <time dateTime={post.date}>
-                      {formatPostDate(post.date)}
-                    </time>
-                  </p>
-                  <CardTitle className="text-lg">{post.title}</CardTitle>
-                  <CardDescription>{post.description}</CardDescription>
-                </CardHeader>
-                {post.tags.length > 0 && (
-                  <CardContent>
-                    <div className="flex flex-wrap gap-1.5">
-                      {post.tags.map((tag) => (
-                        <Badge key={tag} variant="secondary">
-                          {tag}
-                        </Badge>
-                      ))}
+                  {post.coverImage && (
+                    <div className="relative m-4 size-32 shrink-0 overflow-hidden rounded-sm">
+                      <Image
+                        src={post.coverImage}
+                        alt={post.title}
+                        fill
+                        className="object-cover"
+                      />
                     </div>
-                  </CardContent>
-                )}
+                  )}
+                </div>
               </Card>
             </Link>
           ))}
