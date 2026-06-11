@@ -1,15 +1,11 @@
-import { FC } from "react";
-
-const Footer: FC = () => {
+const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="text-center">
-      <div className="p-2 text-sm">
-        <p>
-          <small>
-            Copyright © {currentYear} Alaric Li, all rights reserved
-          </small>
+    <footer className="border-t">
+      <div className="container mx-auto max-w-4xl px-6 py-6">
+        <p className="text-center text-xs text-muted-foreground">
+          Copyright © {currentYear} Alaric Li, all rights reserved
         </p>
       </div>
     </footer>

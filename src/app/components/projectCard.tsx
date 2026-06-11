@@ -1,42 +1,75 @@
-import Image from "next/image";
-import { FC } from "react";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Badge } from "@/components/ui/badge";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 
 export interface ProjectCardProps {
   title: string;
   description: string;
   imageUrl: string;
-  githubUrl: string;
+  url: string;
+  technologies?: string[];
 }
 
-const ProjectCard: FC<ProjectCardProps> = ({
+function getInitials(title: string) {
+  return title
+    .split(/\s+/)
+    .slice(0, 2)
+    .map((word) => word.charAt(0).toUpperCase())
+    .join("");
+}
+
+const ProjectCard = ({
   title,
   description,
   imageUrl,
-  githubUrl,
-}) => {
+  url,
+  technologies,
+}: ProjectCardProps) => {
   return (
-    <div className="bg-[#E6E8F0] text-[#333333] border border-gray-200 rounded-lg max-w-2xl shadow-md overflow mx-auto hover:scale-105 transition-transform duration-300">
-      <div className="flex">
-        <div className="w-1/4 p-1">
-          <Image
-            src={imageUrl}
-            width={300}
-            height={300}
-            alt={description}
-            className="w-full h-full object-cover rounded-md"
-          />
-        </div>
-
-        <div className="w-3/4">
-          <a href={githubUrl}>
-            <h3 className="text-xl font-semibold hover:underline pt-3 pb-0 pl-4 pr-2 text-center">
-              {title}
-            </h3>
+    <Card className="group flex h-full flex-col justify-between overflow-hidden transition-all duration-300 hover:border-muted-foreground/30 hover:shadow-md [--card-spacing:--spacing(6)]">
+      <CardHeader className="flex flex-row items-center gap-4">
+        <Avatar className="size-14 rounded-lg after:rounded-lg">
+          <AvatarImage src={imageUrl} alt={`${title} logo`} />
+          <AvatarFallback className="rounded-lg text-sm font-medium">
+            {getInitials(title)}
+          </AvatarFallback>
+        </Avatar>
+        <CardTitle className="flex-1 text-xl font-semibold tracking-tight">
+          <a
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline-offset-4 hover:underline"
+          >
+            {title}
           </a>
-          <p className="pt-2 pb-3 pl-4 pr-2">{description}</p>
-        </div>
-      </div>
-    </div>
+        </CardTitle>
+      </CardHeader>
+      <CardContent>
+        <p className="text-sm leading-relaxed text-muted-foreground">
+          {description}
+        </p>
+      </CardContent>
+      {technologies && technologies.length > 0 && (
+        <CardFooter className="flex flex-wrap gap-1.5 border-t-0 bg-transparent pt-2">
+          {technologies.map((tech) => (
+            <Badge
+              key={tech}
+              variant="secondary"
+              className="px-2 py-0.5 text-[11px] font-medium"
+            >
+              {tech}
+            </Badge>
+          ))}
+        </CardFooter>
+      )}
+    </Card>
   );
 };
 

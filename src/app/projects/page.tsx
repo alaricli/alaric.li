@@ -22,13 +22,13 @@ const projects: ProjectCardProps[] = [
     title: "recharged-shop.com",
     description: "work-in-progress fully custom e-commerce store",
     imageUrl: "/phone.jpg",
-    githubUrl: "https://github.com/alaricli/recharged.icu",
+    url: "https://github.com/alaricli/recharged.icu",
   },
   {
     title: "Jenkins Build Log Analysis Pipeline",
     description: "Automated Jenkins log analysis pipeline to report build failures in natural language from raw console output logs",
     imageUrl: "/jenkins.jpg",
-    githubUrl: "https://github.com/alaricli/recharged.icu",
+    url: "https://github.com/alaricli/recharged.icu",
   },
   // {
   //   title: "UBC Insight",
@@ -43,23 +43,19 @@ const projects: ProjectCardProps[] = [
     description:
       "Contributions I made to the Pokémon Showdown battle simulator open-source project",
     imageUrl: "/showdown.png",
-    githubUrl: "https://github.com/alaricli/pokemon-showdown",
+    url: "https://github.com/alaricli/pokemon-showdown",
   },
 ];
 
 const Projects: FC = () => {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center">
-      <h1 className="text-5xl font-semi-bold p-8">Projects</h1>
-      <div className="flex flex-col gap-6">
-        {projects.map((project, index) => (
-          <ProjectCard
-            key={index}
-            title={project.title}
-            description={project.description}
-            imageUrl={project.imageUrl}
-            githubUrl={project.githubUrl}
-          />
+    <div className="container mx-auto w-full max-w-4xl px-6 py-12 md:py-20">
+      <h1 className="text-center text-4xl font-bold tracking-tight">
+        Projects
+      </h1>
+      <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2">
+        {projects.map((project) => (
+          <ProjectCard key={project.title} {...project} />
         ))}
       </div>
     </div>

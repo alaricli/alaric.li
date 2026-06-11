@@ -1,43 +1,50 @@
 import Link from "next/link";
-import { FC } from "react";
+import { FileText, Mail } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
-const Navbar: FC = () => {
+const navLinks = [
+  { href: "/", label: "Home" },
+  { href: "/projects", label: "Projects" },
+  { href: "/blog", label: "Blog" },
+];
+
+const Navbar = () => {
   return (
-    <nav className="flex justify-between items-center p-4">
-      <div className="">
-        <ul className="flex space-x-4">
-          <li>
-            <Link href="/">Home</Link>
-          </li>
-          <li>
-            <Link href="/projects">Projects</Link>
-          </li>
-          <li>
-            <Link href="/blog">Blog</Link>
-          </li>
+    <header className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <nav className="container mx-auto flex h-14 max-w-4xl items-center justify-between px-6">
+        <ul className="flex items-center gap-1">
+          {navLinks.map(({ href, label }) => (
+            <li key={href}>
+              <Button asChild variant="ghost">
+                <Link href={href}>{label}</Link>
+              </Button>
+            </li>
+          ))}
         </ul>
-      </div>
-      <div>
-        <ul className="flex space-x-4">
+        <ul className="flex items-center gap-2">
           <li>
-            <a href="https://drive.google.com/file/d/1W_Lpz3W5KBd5UJkbq76ja9_E5T7s0Ec-/view?usp=sharing">
-              <span>Resume</span>
-            </a>
+            <Button asChild variant="outline">
+              <a
+                href="https://drive.google.com/file/d/1W_Lpz3W5KBd5UJkbq76ja9_E5T7s0Ec-/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FileText />
+                Resume
+              </a>
+            </Button>
           </li>
           <li>
-            <a
-              href="mailto:alaricli@outlook.com?subject=Hello%20Alaric&body=Hello%20Alaric,"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span className="bg-[#3B82F6] text-[#FFFFFF] p-3 rounded">
+            <Button asChild>
+              <a href="mailto:alaricli@outlook.com?subject=Hello%20Alaric&body=Hello%20Alaric,">
+                <Mail />
                 Contact Me
-              </span>
-            </a>
+              </a>
+            </Button>
           </li>
         </ul>
-      </div>
-    </nav>
+      </nav>
+    </header>
   );
 };
 
