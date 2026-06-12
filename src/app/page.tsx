@@ -32,7 +32,7 @@ const socialLinks = [
     hoverClass: "group-hover:text-[#2d2d2d]",
   },
   {
-    href: "https://www.instagram.com/alaric_li_/",
+    href: "https://www.instagram.com/alaric.li/",
     label: "Instagram",
     icon: FaInstagram,
     hoverClass: "group-hover:text-[#E1306C]",
