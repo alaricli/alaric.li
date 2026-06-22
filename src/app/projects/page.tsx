@@ -57,7 +57,7 @@ const projects: ProjectCardProps[] = [
 const Projects: FC = () => {
   return (
     <div className="container mx-auto w-full max-w-4xl px-6 py-12 md:py-20">
-      <h1 className="text-center text-4xl font-bold tracking-tight">
+      <h1 className="text-center text-3xl font-bold tracking-tight md:text-4xl">
         Projects
       </h1>
       <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2">

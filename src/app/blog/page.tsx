@@ -22,7 +22,7 @@ export default function Blog() {
 
   return (
     <div className="container mx-auto w-full max-w-4xl px-6 py-12 md:py-20">
-      <h1 className="text-center text-4xl font-bold tracking-tight">Blog</h1>
+      <h1 className="text-center text-3xl font-bold tracking-tight md:text-4xl">Blog</h1>
       {posts.length === 0 ? (
         <p className="mt-10 text-center text-muted-foreground">
           Blog Coming Soon
@@ -60,7 +60,7 @@ export default function Blog() {
                     )}
                   </div>
                   {post.coverImage && (
-                    <div className="relative m-4 size-32 shrink-0 overflow-hidden rounded-sm">
+                    <div className="relative m-4 size-24 shrink-0 overflow-hidden rounded-sm sm:size-32">
                       <Image
                         src={post.coverImage}
                         alt={post.title}

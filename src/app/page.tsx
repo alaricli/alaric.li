@@ -47,7 +47,7 @@ export default function Home() {
           <AvatarImage src="/me_squared.JPEG" alt="Portrait of Alaric Li" />
           <AvatarFallback>AL</AvatarFallback>
         </Avatar>
-        <h1 className="mt-6 text-4xl font-bold tracking-tight">Alaric Li</h1>
+        <h1 className="mt-6 text-3xl font-bold tracking-tight md:text-4xl">Alaric Li</h1>
         <div className="mt-3 flex flex-col gap-0.5 text-muted-foreground">
           <span>software engineer @ea</span>
           <span>prev: sap</span>

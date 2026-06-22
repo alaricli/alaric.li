@@ -53,7 +53,7 @@ export default async function Page({ params }: PageProps) {
         <p className="text-sm text-muted-foreground">
           <time dateTime={post.date}>{formatPostDate(post.date)}</time>
         </p>
-        <h1 className="mt-2 text-4xl font-bold tracking-tight">
+        <h1 className="mt-2 text-3xl font-bold tracking-tight md:text-4xl">
           {post.title}
         </h1>
         {post.description && (
